@@ -1,5 +1,7 @@
 import static org.junit.Assert.assertEquals;
+
 import java.util.ArrayList;
+import java.util.List;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
@@ -10,36 +12,27 @@ import uk.ac.cam.jrs237.Exercise1;
 public class Exercise1Test {
 	@Test
 	public void for_loop_test() {
-		ArrayList<Integer> arrayList = new ArrayList<>();
-		arrayList.add(1);
-		arrayList.add(2);
-		arrayList.add(3);
+		List<Integer> list = new ArrayList<>(List.of(1, 2, 3));
 
-		int result = Exercise1.mean_regular_for(arrayList);
+		int result = Exercise1.mean_regular_for(list);
 
 		assertEquals(result, 2);
 	}
 
 	@Test
 	public void for_each_test() {
-		ArrayList<Integer> arrayList = new ArrayList<>();
-		arrayList.add(1);
-		arrayList.add(2);
-		arrayList.add(3);
+		List<Integer> list = new ArrayList<>(List.of(1, 2, 3));
 
-		int result = Exercise1.mean_for_each(arrayList);
+		int result = Exercise1.mean_for_each(list);
 
 		assertEquals(result, 2);
 	}
 
 	@Test
 	public void iterator_test() {
-		ArrayList<Integer> arrayList = new ArrayList<>();
-		arrayList.add(1);
-		arrayList.add(2);
-		arrayList.add(3);
+		List<Integer> list = new ArrayList<>(List.of(1, 2, 3));
 
-		int result = Exercise1.mean_iterator(arrayList);
+		int result = Exercise1.mean_iterator(list);
 
 		assertEquals(result, 2);
 	}
